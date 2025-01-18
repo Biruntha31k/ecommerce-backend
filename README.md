@@ -73,3 +73,6 @@ For any questions, contact : bindhu31krish@gmail.com
 --- 
 
 This backend is a core part of the BlossomTrends project. Let us know if you encounter any issues!
+
+---
+Developed by **Biruntha Krishnamoorthy**
