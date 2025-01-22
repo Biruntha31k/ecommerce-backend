@@ -16,25 +16,25 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL, // Use CLIENT_URL for CORS
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow necessary HTTP methods
-  credentials: true, // Allow cookies and credentials
+  origin: process.env.CLIENT_URL,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
 }));
 app.use(express.json());
 
 // Set up logging middleware
 if (process.env.NODE_ENV === 'production') {
-  app.use(morgan('combined')); // For production logging
+  app.use(morgan('combined')); 
 } else {
-  app.use(morgan('dev')); // For development logging
+  app.use(morgan('dev'));
 }
 
 // Set up compression middleware
-app.use(compression()); // Adds gzip/deflate compression for responses
+app.use(compression());
 
 // Set up session middleware
 app.use(session({
-  secret: process.env.SESSION_SECRET, // Secret key for encryption
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true,
   cookie: {
